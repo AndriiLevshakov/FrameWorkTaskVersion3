@@ -15,8 +15,12 @@ namespace Core.Configuration
         static Configuration()
         {
             Model = new ConfigModel();
+            var basePath = AppContext.BaseDirectory;
+            var relativePath = @"..\..\..\..\Core\Configuration\config.json";
+            var fullPath = System.IO.Path.Combine(basePath, relativePath);
+
             new ConfigurationBuilder()
-                .AddJsonFile(@"./Configuration/config.json")
+                .AddJsonFile(fullPath)
                 .Build()
                 .Bind(Model);
 
