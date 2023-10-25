@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.LoggerFolder
 {
-    internal class IRPLogger
+    public class IRPLogger
     {
     }
 }
