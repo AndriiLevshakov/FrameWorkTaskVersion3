@@ -15,7 +15,7 @@ namespace Core.DriverFactory
         Edge
     }
 
-    public class DriverProvider
+    public static class DriverProvider
     {
         public static IWebDriver GetDriver(Drivers driver)
         {

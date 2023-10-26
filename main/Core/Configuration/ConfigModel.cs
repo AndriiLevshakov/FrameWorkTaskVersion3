@@ -6,7 +6,7 @@ namespace Core.Configuration
 {
     public class ConfigModel
     {
-        public string Browser { get; set; }
-        public string Log { get; set; }
+        public string? Browser { get; set; }
+        public string? Log { get; set; }
     }
 }

@@ -8,8 +8,8 @@ namespace Pages
 {
     public class UkrNetLoginPage
     {
-        private IWebDriver driver;
-        private WebDriverWait wait;
+        private readonly IWebDriver driver;
+        private readonly WebDriverWait wait;
 
         public UkrNetLoginPage(IWebDriver driver)
         {
@@ -80,21 +80,14 @@ namespace Pages
             addressField.SendKeys(address);
             Actions actions = new Actions(driver);
             actions.SendKeys(Keys.Enter).Build().Perform();
-            //Console.ReadLine();
-
+            
             //SwitchToFrameWithExplicitWait(driver, "mce");
             textField.Click();
             actions.SendKeys("Andreas");
             actions.SendKeys(Keys.Enter).Build().Perform();
             sendButton.Click();
 
-            //Actions action = new Actions(driver);
-
-
-
             Thread.Sleep(2000);
-
-            bool check = ConfirmationCheck();
 
         }
 

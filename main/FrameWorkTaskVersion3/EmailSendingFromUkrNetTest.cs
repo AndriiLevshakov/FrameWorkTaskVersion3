@@ -14,10 +14,10 @@ namespace Tests
     public class EmailSendingFromUkrNetTest
     {
         IWebDriver driver;
-        private UkrNetDesktopPage ukrNetDesktopPage;
+        //private UkrNetDesktopPage ukrNetDesktopPage;
         private UkrNetLoginPage ukrNetLoginPage;
         WebDriverWait wait;
-        private string mainWindowHandle;
+        //private string mainWindowHandle;
 
         [SetUp]
         public void Setup()

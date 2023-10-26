@@ -12,21 +12,21 @@ using System.Threading.Tasks;
 
 namespace Pages
 {
-    public class GMXPage
+    public class GmxPage
     {
-        private IWebDriver driver;
-        private WebDriverWait wait;
+        private readonly IWebDriver driver;
+        private readonly WebDriverWait wait;
 
-        public GMXPage(IWebDriver driver)
+        public GmxPage(IWebDriver driver)
         {
             this.driver = driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
-        IWebElement loginInput => wait.Until(ExpectedConditions.ElementExists(By.CssSelector("body > div > div > main > div._25Ti7VOS > form > div._3c6HWgJy > div > label > input")));
-        IWebElement passwordInput => wait.Until(ExpectedConditions.ElementExists(By.CssSelector("body > div > div > main > div._25Ti7VOS > form > div:nth-child(2) > div > label > input")));
+        //IWebElement loginInput => wait.Until(ExpectedConditions.ElementExists(By.CssSelector("body > div > div > main > div._25Ti7VOS > form > div._3c6HWgJy > div > label > input")));
+        //IWebElement passwordInput => wait.Until(ExpectedConditions.ElementExists(By.CssSelector("body > div > div > main > div._25Ti7VOS > form > div:nth-child(2) > div > label > input")));
 
-        IWebElement continueButton => wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//button[@id='onetrust-accept-btn-handler']")));
+        //IWebElement continueButton => wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//button[@id='onetrust-accept-btn-handler']")));
 
         public void Continue()
         {

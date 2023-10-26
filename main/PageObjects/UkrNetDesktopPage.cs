@@ -17,15 +17,15 @@ namespace Pages
 {
     public class UkrNetDesktopPage
     {
-        private IWebDriver driver;
-        private WebDriverWait wait;
+        private readonly IWebDriver driver;
+        private readonly WebDriverWait wait;
 
         public UkrNetDesktopPage(IWebDriver driver)
         {
             this.driver = driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
             var browser = (Drivers)Enum.Parse(typeof(Drivers), Configuration.Model.Browser);
-            driver = DriverProvider.GetDriverFactory(browser).CreateDriver();
+            _ = DriverProvider.GetDriverFactory(browser).CreateDriver();
         }
 
 

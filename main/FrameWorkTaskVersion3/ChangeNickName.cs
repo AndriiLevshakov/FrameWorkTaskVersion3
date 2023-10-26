@@ -45,8 +45,6 @@ namespace Tests
 
             nickNameField.Clear();
 
-            //Console.ReadLine();
-
             nickNameField.SendKeys("Andrii Levshakov2");
 
             Thread.Sleep(2000);
@@ -60,6 +58,8 @@ namespace Tests
             Thread.Sleep(2000);
 
             IWebElement nickNameField2 = wait.Until(ExpectedConditions.ElementExists(By.XPath("//*[@value='Andrii Levshakov2']")));
+
+            Assert.IsTrue(nickNameField2.Displayed);
         }
 
         [TearDown]

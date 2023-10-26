@@ -17,7 +17,7 @@ namespace Tests
     public class GMXTest
     {
         IWebDriver driver;
-        private GMXPage gmxPage;
+        private GmxPage gmxPage;
         WebDriverWait wait;
 
         [SetUp]
@@ -26,7 +26,7 @@ namespace Tests
             var browser = (Drivers)Enum.Parse(typeof(Drivers), Configuration.Model.Browser);
             driver = DriverProvider.GetDriverFactory(browser).CreateDriver();
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            gmxPage = new GMXPage(driver);
+            gmxPage = new GmxPage(driver);
             gmxPage.NavigateToLoginPage();
             gmxPage.Continue();
         }
